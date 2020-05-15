@@ -23,10 +23,10 @@
 </header>
 
 <body>
-    <h1 style="text-align: center;">Insights into Cancer Cases in the United States</h1>
-    <h3 style="text-align: center;">by zg120</h3>
+    <h2 style="text-align: center;">Insights into Cancer Cases in the United States</h2>
     <br>
     <br>
+    <div class ="center" style="width: 80%;">
 
     <div class="center" style="width: 80%;">
         <p>Everyone is exposed to levels of contamination from natural and technological sources in varying proportions, depending on their geographical location, lifestyle, genes run in families and more. The risk of cancer is obvious but can be reduced by changes in many factors, such as diet, environmental exposures, or even mood. Many centers have conducted research in cancer to help reduce and prevent the impact it carries. In this mini-project, I want to study the relationship between the amount of cancer cases and power plant sites, waste sites, etc and provide specific information for people in counties or states in the United States. 
@@ -36,18 +36,18 @@
         </p>
         <iframe style="width: 800px; height: 500px;" src="graphs/US_county_cancer_poll_map.html"></iframe>
         <p><br> Almost every county in the United States has cancer cases although Kansas and Minnesota's cancer data are missing. By plotting the histogram graph of cancer cases per 100000 people, 
-            we can see the distribution of cancer cases per 100000 people. 
-           The number of counties are generally normally distributed among different counties in the US.</p>    
+            we can see the distribution of cancer cases and its trend rate per 100000 people. 
+           The number and trend rate of counties are generally normally distributed among different counties in the US.</p>    
     </div>
 
     <div class= "container" style="width: 80%;">
         <div class="row">
           <div class="col">
               
-            <img class="center" src="" alt="hist">
+            <img class="center" src="graphs/hist.png" alt="hist" style="width: 100%;">
           </div>
           <div class="col">
-            <img class="center" src="" alt="hist">
+            <img class="center" src="graphs/hist2.png" alt="hist" style="width: 100%;">
           </div>
         </div>
     </div>
@@ -55,44 +55,71 @@
     <div class="center" style="width: 80%;">
         <p><br>What causes the difference among counties? How different factors affect people's health?<br>
             To solve these questions, let's first look at the US power plants. Below is the map plotting by the sum of gigawatt hours of states. 
-            If the state is more blue, it produces more power. And if the state is more grey, it stores more power. As we can see from the plot, Texas, Pennsylvania, Illinois, Florida and Arizona are the top 5 state produce or store power.
-
+            If the state is more blue, it produces more power. And if the state is more grey, it stores more power.
+            As we can see from the plot, Texas, Pennsylvania, Illinois, Florida and Arizona are the top 5 state produce or store power.
         </p>
-        <img class="center" src="" alt="tableau">
+        <img class="center" src="graphs/tableau.png" alt="tableau" style="width: 80%;">
     </div>
+    <p>    </p>
 
     <div class="center" style="width: 80%;">
-        <p><br>writing</p>
-        <img class="center" src="" alt="EPA">
+        <p><br>Superfund sites may also influence the health of local people with regard to cancer.
+        The epa.gov provides a map (see below) for all the sites in the United States. Sites gather mostly along the East and West coast. Density of sites in New England Area is extremely high.
+        Will these sites have positive or negative effect to cancer? I will discuss more later.
+        </p>
+        <img class="center" src="graphs/EPA.png" alt="EPA" style="width: 80%;">
     </div>
 
     <div class= "container" style="width: 80%;">
         <div class="row">
         <div class="col">
-            <p>writing</p>
+            <p></p>
+            <p></p>
+            <p>By drawing a correlation plot and a correlation matrix, we can easily see the correlation between different features. 
+                Here with the plot below, we can know the relationship between cancer cases per 100000 people and features such as
+                fips, trend rate of cancer, Superfund sites, score index and power plants. 
+                It shows that superfund sites and score index are most closely related. 
+                Power plants have close relation with Superfund sites and score index. 
+                Since score index represents the Superfund site's cleaness, we can believe that Superfund sites and powerplants are strongly related to each other.
+            </p>
         </div>
             
         <div class="w-100"></div>  
           <div class="col">
               
-            <img class="center" src="" alt="corr">
+            <img class="center" src="graphs/corr.png" alt="corr" style="width: 100%; ">
           </div>
           <div class="col">
-            <img class="center" src="" alt="corr">
+            <img class="center" src="graphs/corr2.png" alt="corr" style="width: 100%;padding-top: 20%;">
           </div>
         </div>
     </div>
 
 
     <div class="center" style="width: 80%;">
-        <p><br>writing</p>
-        <img class="center" src="" alt="boxplot">
+        <p><br>There are many kinds of power plants and Superfund sites. They use different kinds of fuel: waste, coal, hydro, oil, geothermal, biomass, petcoke, nuclear, wind, solar energy.
+        With similar methods as above, petcoke, nuclear, geothermal, biomass shows relationship between cancer cases. But boxplots for these four fuel 
+        below indicates that, for counties who have or do not have these kinds of plants, there is no big difference of cancer cases.
+        </p>
+        <img class="center" src="graphs/boxplot.jpeg" alt="boxplot" style="width: 80%;">
     </div>
 
     <div class="center" style="width: 80%;">
-        <p><br>writing</p>
-        <img class="center" src="" alt="linear regression">
+        <p><br>Also, there are some plants in top 20 cancer cases in the US. It is interesting that
+        most of them are in Kentucky. American Cancer Society shows that it is lung cancer that pushes Kentucky's cancer rate to the highest in the United States. 
+        </p>
+        <img class="center" src="graphs/top20.png" alt="top20" style="width: 80%;">
     </div>
+
+    <div class="center" style="width: 80%;">
+        <p><br>
+        Multiple linear regression result can better display the relationship between cancer and plants.
+        Based on th result below, it is confident to say that wind, gas, geothermal, hydro, solar and biomass plants are significant related power plants
+        when we consider cancer cases.
+        </p>
+        <img class="center" src="graphs/linear_regression.png" alt="linear regression" style="width: 80%;">
+    </div>
+</div>
 
 
 
