@@ -2,7 +2,7 @@
 
 <header>
     <title>
-        GZR
+        zg120 mini-project
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,6 +24,7 @@
 
 <body>
     <h2 style="text-align: center;">Insights into Cancer Cases in the United States</h2>
+    <h5 style="text-align: center;">by zg120</h5>
     <br>
     <br>
     <div class ="center" style="width: 80%;">
@@ -75,7 +76,7 @@
         <div class="col">
             <p></p>
             <p></p>
-            <p>By drawing a correlation plot and a correlation matrix, we can easily see the correlation between different features. 
+            <p> By drawing a correlation plot and a correlation matrix, we can easily see the correlation between different features. 
                 Here with the plot below, we can know the relationship between cancer cases per 100000 people and features such as
                 fips, trend rate of cancer, Superfund sites, score index and power plants. 
                 It shows that superfund sites and score index are most closely related. 
@@ -119,6 +120,38 @@
         </p>
         <img class="center" src="graphs/linear_regression.png" alt="linear regression" style="width: 80%;">
     </div>
+
+    <div class="center" style="width: 80%;">
+        <p><br>
+        By plotting clustering graph, we can see there are three clustering with some outliers. 
+        However, the clustering results are not good enough to see which counties are grouped together because clusteirngs 
+        are very close to each other. It is not clear especially for counties on the border. So, applying this model is not satisfying,
+        when study cancer cases, I should consider more.
+        </p>
+        <img class="center" src="graphs/cluster.png" alt="clustering" style="width: 80%;">
+    </div>
+
+    <div class="center" style="width: 80%;">
+        <p><br>
+        Conclusion:<br>
+         power plants and Superfund sites have impact on cancer cases of every county in the US.
+        However, many risk factors for cancer also should be considered when think about the cause of cancer cases. Because of this, study in cancer
+        is still chanllenging and require collboration among different professionals in various settings. 
+        </p>
+    </div>
+
+    <div class="center" style="width: 80%;">
+        <p><br>
+        Reference:<br><i>
+        Gagliardia.A.R, & Dobrowb.M.J, & Wrightc.F.C. How can we improve cancer care? A review of interprofessional collaboration models and their use in clinical management. Surgical Oncology. <br>
+        Giovanni Ghirga. Cancer in children residing near nuclear power plants: an open question. National Institute of Health.
+        https://www.cdc.gov/cancer/dcpc/data/index.htm <br>
+        https://www.epa.gov/superfund</i><br><br><br>
+
+        </p>
+    </div>
+
+
 </div>
 
 
